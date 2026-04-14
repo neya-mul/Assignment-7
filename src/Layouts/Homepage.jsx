@@ -5,7 +5,7 @@ import ThirdPart from '../Components/ThirdPart'
 
 export default function Homepage() {
     return (
-        <div>
+        <div className='bg-[#F8FAFC]'>
             <FirstPart></FirstPart>
             <SecondPart></SecondPart>
             <ThirdPart></ThirdPart>
