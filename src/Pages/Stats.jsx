@@ -21,7 +21,7 @@ export default function Stats() {
         <h1>Timeline</h1>
       </div>
       <div>
-        <div className='bg-white p-3 rounded-2xl'>
+        <div className=' p-3 rounded-2xl space-y-2'>
           {
             added.map(add => <Added add={add} key={add.id}></Added>)
               
