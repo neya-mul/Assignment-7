@@ -6,7 +6,10 @@
     "email": "ayesha.rahman@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["university", "close friend"],
+    "tags": [
+      "university",
+      "close friend"
+    ],
     "bio": "Met during our first year at Dhaka University. We used to study late at TSC and still share book recommendations.",
     "goal": 14,
     "next_due_date": "2026-04-10"
@@ -18,7 +21,10 @@
     "email": "tanvir.hasan88@yahoo.com",
     "days_since_contact": 6,
     "status": "on-track",
-    "tags": ["work", "gym buddy"],
+    "tags": [
+      "work",
+      "gym buddy"
+    ],
     "bio": "Colleague from my previous job. We still hit the gym together on weekends and talk about startups.",
     "goal": 10,
     "next_due_date": "2026-04-18"
@@ -30,7 +36,10 @@
     "email": "nusrat.jahan@outlook.com",
     "days_since_contact": 12,
     "status": "almost due",
-    "tags": ["school", "creative"],
+    "tags": [
+      "school",
+      "creative"
+    ],
     "bio": "We were classmates in school. She's now a graphic designer and often shares her latest artwork.",
     "goal": 14,
     "next_due_date": "2026-04-16"
@@ -42,7 +51,9 @@
     "email": "imran.c@gmail.com",
     "days_since_contact": 25,
     "status": "overdue",
-    "tags": ["family friend"],
+    "tags": [
+      "family friend"
+    ],
     "bio": "Family friend who moved to Chattogram. We usually catch up about travel and food spots.",
     "goal": 20,
     "next_due_date": "2026-04-05"
@@ -54,7 +65,10 @@
     "email": "farhana.kabir@mail.com",
     "days_since_contact": 9,
     "status": "on-track",
-    "tags": ["neighbor", "walking partner"],
+    "tags": [
+      "neighbor",
+      "walking partner"
+    ],
     "bio": "Lives in my neighborhood. We go for morning walks and discuss health and lifestyle habits.",
     "goal": 15,
     "next_due_date": "2026-04-21"
@@ -66,7 +80,10 @@
     "email": "rakib.ahmed@protonmail.com",
     "days_since_contact": 14,
     "status": "almost due",
-    "tags": ["college", "tech"],
+    "tags": [
+      "college",
+      "tech"
+    ],
     "bio": "Studied computer science together. We still talk about programming trends and side projects.",
     "goal": 15,
     "next_due_date": "2026-04-15"
@@ -78,7 +95,10 @@
     "email": "samia.islam@gmail.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["cousin", "family"],
+    "tags": [
+      "cousin",
+      "family"
+    ],
     "bio": "My cousin who recently started her own bakery business. I help her with social media ideas.",
     "goal": 10,
     "next_due_date": "2026-04-20"
@@ -90,9 +110,42 @@
     "email": "mahmudul.karim@live.com",
     "days_since_contact": 21,
     "status": "overdue",
-    "tags": ["travel buddy"],
+    "tags": [
+      "travel buddy"
+    ],
     "bio": "We’ve traveled to Sylhet and Cox’s Bazar together. Always planning the next trip but rarely stay in touch.",
     "goal": 14,
     "next_due_date": "2026-04-08"
+  },
+  
+  {
+    "id": 9,
+    "name": "Shakil Mahmud",
+    "picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "email": "shakil.mahmud@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": [
+      "office",
+      "football"
+    ],
+    "bio": "Worked together at a previous company. We used to play football every Friday evening and still keep up with match scores.",
+    "goal": 12,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 10,
+    "name": "Tania Sultana",
+    "picture": "https://randomuser.me/api/portraits/women/34.jpg",
+    "email": "tania.sultana@yahoo.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": [
+      "university",
+      "debate club"
+    ],
+    "bio": "Met through university debate club. She now works in media and we occasionally discuss current events and public speaking.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
   }
 ]
