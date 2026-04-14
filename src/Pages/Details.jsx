@@ -15,15 +15,19 @@ const friendsPromise = fetch("/friends.json")
     .then(res => res.json())
 
 export default function Details() {
-    const  {
+    const {
         message,
-            setMessage,
-            audio,
-            setAudio,
-            isVideo,
-            setVideo 
-    }  = useContext(FriendContext)
-// console.log(obj);
+        setMessage,
+        audio,
+        setAudio,
+        isVideo,
+        setVideo,
+        added,
+        isAdded,
+        type,
+        setType
+    } = useContext(FriendContext)
+    // console.log(obj);
 
 
 
@@ -35,12 +39,22 @@ export default function Details() {
     // console.log(expectedFriend);
     const callButton = () => {
         setAudio(true)
+        setType('audio')
+        isAdded([...added, {...expectedFriend, type:"audio"}])
     }
-     const messageButton = () => {
+    // console.log(added);
+
+    const messageButton = () => {
         setMessage(true)
+        setType('message')
+
+        isAdded([...added,  {...expectedFriend, type:"message"}])
     }
-      const videoButton = () => {
+    const videoButton = () => {
         setVideo(true)
+        setType('video')
+
+        isAdded([...added,  {...expectedFriend, type:"video"}])
     }
 
 
@@ -90,15 +104,15 @@ export default function Details() {
                 <div className='bg-white p-4 rounded-2xl border border-gray-300'>
                     <h1 className='text-3xl font-bold my-2'>Quick Check-In</h1>
                     <div className='text-center gap-3 grid grid-cols-1 lg:grid-cols-3 ' >
-                        <Link onClick={()=>callButton()} to="/stats" className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
-                           <img src={call} alt="" />
-                                <p>Call</p>
+                        <Link onClick={() => callButton()} to="/stats" className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
+                            <img src={call} alt="" />
+                            <p>Call</p>
                         </Link>
-                        <Link onClick={()=> messageButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={() => messageButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
                             <img src={msg} alt="" />
                             <p>Messege</p>
                         </Link>
-                        <Link onClick={()=>videoButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={() => videoButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
                             <img src={video} alt="" />
                             <p>Video</p>
                         </Link>
