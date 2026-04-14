@@ -5,12 +5,16 @@ import App from './App.jsx'
 // import { RouterProvider } from 'react-router/dom'
 import { router } from './Router/router.jsx'
 import { RouterProvider } from 'react-router/dom'
+import FriendProvider from './Context/FriendProvider.jsx'
 // import { RouterProvider } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} />
+    <FriendProvider>
+      <RouterProvider router={router} />
+    </FriendProvider>
 
-   
+
+
   </StrictMode>,
 )

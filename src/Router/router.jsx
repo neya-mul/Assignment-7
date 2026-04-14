@@ -15,10 +15,7 @@ export const router = createBrowserRouter([
         element: <Homepage></Homepage>
 
       },
-      {
-        path: "/timeline",
-        element: <Timeline></Timeline>
-      },
+
       {
         path: "/details/:id",
         element: <Details></Details>
@@ -26,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Stats></Stats>
+      },
+      {
+        path: "/timeline",
+        element: <Timeline></Timeline>
       }
     ]
   },

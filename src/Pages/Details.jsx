@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { use, useContext } from 'react'
 import { AiFillDelete } from 'react-icons/ai'
 import { BsCameraVideo } from 'react-icons/bs'
 import { FaBell } from 'react-icons/fa'
@@ -6,21 +6,42 @@ import { FaBoxArchive } from 'react-icons/fa6'
 import { FiArchive } from 'react-icons/fi'
 import { IoCallOutline } from 'react-icons/io5'
 import { LuMessageSquareText } from 'react-icons/lu'
-import { useParams } from 'react-router'
+import { Link, useParams } from 'react-router'
 import call from "../assets/call.png"
 import video from "../assets/video.png"
 import msg from "../assets/text.png"
+import { FriendContext } from '../Context/FriendProvider'
 const friendsPromise = fetch("/friends.json")
     .then(res => res.json())
 
 export default function Details() {
+    const  {
+        message,
+            setMessage,
+            audio,
+            setAudio,
+            isVideo,
+            setVideo 
+    }  = useContext(FriendContext)
+// console.log(obj);
+
+
+
     const friends = use(friendsPromise)
     // console.log(friends);
     const { id } = useParams()
     const expectedFriend = friends.find(friend => friend.id == id)
     const { name, status, picture, email, bio, next_due_date, tags, days_since_contact, goal } = expectedFriend
-    console.log(expectedFriend);
-
+    // console.log(expectedFriend);
+    const callButton = () => {
+        setAudio(true)
+    }
+     const messageButton = () => {
+        setMessage(true)
+    }
+      const videoButton = () => {
+        setVideo(true)
+    }
 
 
     return (
@@ -30,7 +51,7 @@ export default function Details() {
                 <div className='text-center bg-white p-6 border border-gray-300 rounded-2xl'>
                     <img src={picture} alt="" className='mx-auto rounded-full' />
                     <h1 className='text-2xl font-bold'>{name}</h1>
-                    <p className={`w-fit mx-auto p-2 rounded-2xl text-gray-900 ${status === 'overdue'? "bg-red-300" : status=== 'on-track'? "bg-green-400" : "bg-yellow-300"}`}> {status}</p>
+                    <p className={`w-fit mx-auto p-2 rounded-2xl text-gray-900 ${status === 'overdue' ? "bg-red-300" : status === 'on-track' ? "bg-green-400" : "bg-yellow-300"}`}> {status}</p>
                     <p> {tags} </p>
                     <p>{email}</p>
                 </div>
@@ -69,18 +90,18 @@ export default function Details() {
                 <div className='bg-white p-4 rounded-2xl border border-gray-300'>
                     <h1 className='text-3xl font-bold my-2'>Quick Check-In</h1>
                     <div className='text-center gap-3 grid grid-cols-1 lg:grid-cols-3 ' >
-                        <div className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={()=>callButton()} to="/stats" className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
                            <img src={call} alt="" />
-                            <p>Call</p>
-                        </div>
-                        <div className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
-                           <img src={msg} alt="" />
+                                <p>Call</p>
+                        </Link>
+                        <Link onClick={()=> messageButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                            <img src={msg} alt="" />
                             <p>Messege</p>
-                        </div>
-                        <div className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
-                           <img src={video} alt="" />
-                            <p>Video</p> 
-                        </div>
+                        </Link>
+                        <Link onClick={()=>videoButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                            <img src={video} alt="" />
+                            <p>Video</p>
+                        </Link>
                     </div>
                 </div>
             </div>
