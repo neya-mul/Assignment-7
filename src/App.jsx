@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router'
+import Navbar from './Layouts/Navbar'
+import Footer from './Layouts/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-     <h1>Navbar</h1>
-     <Outlet></Outlet>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+      <Footer></Footer>
 
-   
     </>
   )
 }
