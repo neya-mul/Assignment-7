@@ -5,7 +5,7 @@ import ThirdPart from '../Components/ThirdPart'
 
 export default function Homepage() {
     return (
-        <div className='bg-[#F8FAFC]'>
+        <div className='bg-[#F8FAFC] py-10'>
             <FirstPart></FirstPart>
             <SecondPart></SecondPart>
             <ThirdPart></ThirdPart>

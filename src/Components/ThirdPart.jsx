@@ -5,7 +5,7 @@ const friendsPromise = fetch("/friends.json")
 
 export default function ThirdPart() {
   const friends = use(friendsPromise)
-  console.log(friends);
+  // console.log(friends);
 
   return (
     <div className='container mx-auto'>
