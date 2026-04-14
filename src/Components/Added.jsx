@@ -3,7 +3,7 @@ import audioImg from "../assets/call.png"
 import msgImg from "../assets/text.png"
 import vidoImg from "../assets/video.png"
 import { FriendContext } from '../Context/FriendProvider'
-import { data } from 'react-router'
+// import { data } from 'react-router'
 
 export default function Added({ add }) {
     const date = new Date()
@@ -17,7 +17,7 @@ export default function Added({ add }) {
     //     added,
     //     isAdded } = useContext(FriendContext)
     return (
-        <div className='bg-white p-2 rounded-2xl'>
+        <div className='bg-white p-2 rounded-2xl flex gap-3 items-center'>
             <img src={add.type === 'audio' ? audioImg : add.type === 'message' ? msgImg : vidoImg} alt="" />
             <div>
                 {
@@ -28,7 +28,7 @@ export default function Added({ add }) {
                             :
                             (<h1>Video call with <span className='font-bold'>{add.name}</span></h1>)
                 }
-                <p>{date.toLocalDateSring}</p>
+                <p>{date.toLocaleDateString()}</p>
             </div>
         </div>
     )

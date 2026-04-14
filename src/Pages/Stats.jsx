@@ -16,12 +16,12 @@ export default function Stats() {
 
 
   return (
-    <div className='container mx-auto space-y-10'>
+    <div className='container mx-auto space-y-5 my-5'>
       <div>
-        <h1>Timeline</h1>
+        <h1 className='text-3xl font-bold'>Timeline</h1>
       </div>
       <div>
-        <div className=' p-3 rounded-2xl space-y-2'>
+        <div className=' p-2 rounded-2xl space-y-2'>
           {
             added.map(add => <Added add={add} key={add.id}></Added>)
               
