@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import App from "../App";
 import Timeline from "../Pages/Timeline";
 import Stats from "../Pages/Stats";
+import Homepage from "../Layouts/Homepage";
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: "Home"
+        element: <Homepage></Homepage>
 
       },
       {
