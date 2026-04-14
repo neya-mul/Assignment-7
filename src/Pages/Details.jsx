@@ -22,13 +22,13 @@ export default function Details() {
             {/* left side */}
             <div className='space-y-2 md:max-w-[500px] flex-1 '>
                 <div className='text-center bg-white p-6 border border-gray-300 rounded-2xl'>
-                    <img src={picture} alt="" className='mx-auto rounded-full'/>
+                    <img src={picture} alt="" className='mx-auto rounded-full' />
                     <h1>{name}</h1>
                     <p> {status}</p>
                     <p> {tags} </p>
                     <p>{email}</p>
                 </div>
-                <div  className='space-y-2'>
+                <div className='space-y-2'>
                     <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><FaBell /> Snooze 2 weeks</button> </div>
                     <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><FaBoxArchive /> Archive</button> </div>
                     <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><AiFillDelete /> Delete</button> </div>
@@ -36,24 +36,28 @@ export default function Details() {
 
             </div>
             {/* right side */}
-            <div className='flex-2'>
+            <div className='flex-2 space-y-3'>
                 <div className='text-center gap-3 grid grid-cols-1 lg:grid-cols-3' >
-                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-500'>
+                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-300'>
                         <h1 className='text-3xl font-bold'>{days_since_contact}</h1>
                         <p>Days since contact</p>
                     </div>
-                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-500'>
+                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-300'>
                         <h1 className='text-3xl font-bold'>{goal}</h1>
                         <p>Goal</p>
                     </div>
-                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-500'>
+                    <div className='mix-w-[200px] p-10 bg-white  rounded-2xl border border-gray-300'>
                         <h1 className='text-3xl font-bold'>{next_due_date}</h1>
                         <p>Next due data</p>
                     </div>
                 </div>
 
-                <div>
-
+                <div className='bg-white p-5 flex justify-between rounded-2xl border border-gray-300'>
+                    <div className='space-y-7'>
+                        <h1>Relationship Goal</h1>
+                        <p>Connect every <span className='font-bold'>{days_since_contact} days</span></p>
+                    </div>
+                    <button className='btn'>Edit</button>
                 </div>
             </div>
 
