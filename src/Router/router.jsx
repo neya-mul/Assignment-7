@@ -23,11 +23,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/stats",
-        element: <Stats></Stats>
+        element: <Timeline></Timeline>
       },
       {
         path: "/timeline",
-        element: <Timeline></Timeline>
+        element: <Stats></Stats>
       }
     ],
     errorElement:<Error></Error>
