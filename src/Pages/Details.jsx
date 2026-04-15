@@ -11,6 +11,7 @@ import call from "../assets/call.png"
 import video from "../assets/video.png"
 import msg from "../assets/text.png"
 import { FriendContext } from '../Context/FriendProvider'
+import { toast } from 'react-toastify'
 const friendsPromise = fetch("/friends.json")
     .then(res => res.json())
 
@@ -40,21 +41,23 @@ export default function Details() {
     const callButton = () => {
         setAudio(true)
         setType('audio')
-        isAdded([...added, {...expectedFriend, type:"audio"}])
+        isAdded([...added, { ...expectedFriend, type: "audio" }])
+        toast.success('Call sent successfully')
     }
     // console.log(added);
 
     const messageButton = () => {
         setMessage(true)
         setType('message')
+        toast.success('Message sent successfully')
 
-        isAdded([...added,  {...expectedFriend, type:"message"}])
+        isAdded([...added, { ...expectedFriend, type: "message" }])
     }
     const videoButton = () => {
         setVideo(true)
         setType('video')
-
-        isAdded([...added,  {...expectedFriend, type:"video"}])
+        toast.success('Video call sent successfully')
+        isAdded([...added, { ...expectedFriend, type: "video" }])
     }
 
 
@@ -104,15 +107,15 @@ export default function Details() {
                 <div className='bg-white p-4 rounded-2xl border border-gray-300'>
                     <h1 className='text-3xl font-bold my-2'>Quick Check-In</h1>
                     <div className='text-center gap-3 grid grid-cols-1 lg:grid-cols-3 ' >
-                        <Link onClick={() => callButton()} to="/stats" className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={() => callButton()} className=' p-10 bg-[#F8FAFC]  rounded-2xl border border-gray-300 btn flex-col'>
                             <img src={call} alt="" />
                             <p>Call</p>
                         </Link>
-                        <Link onClick={() => messageButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={() => messageButton()} className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
                             <img src={msg} alt="" />
                             <p>Messege</p>
                         </Link>
-                        <Link onClick={() => videoButton()} to="/stats" className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
+                        <Link onClick={() => videoButton()} className=' p-10 bg-[#F8FAFC]   rounded-2xl border border-gray-300 btn flex-col'>
                             <img src={video} alt="" />
                             <p>Video</p>
                         </Link>
