@@ -41,7 +41,7 @@ export default function Details() {
     const callButton = () => {
         setAudio(true)
         setType('audio')
-        isAdded([...added, { ...expectedFriend, type: "audio" }])
+        isAdded([...added, { ...expectedFriend, type: "audio", id: Date.now() }])
         toast.success('Call sent successfully')
     }
     // console.log(added);
@@ -51,13 +51,13 @@ export default function Details() {
         setType('message')
         toast.success('Message sent successfully')
 
-        isAdded([...added, { ...expectedFriend, type: "message" }])
+        isAdded([...added, { ...expectedFriend, type: "message", id: Date.now() }])
     }
     const videoButton = () => {
         setVideo(true)
         setType('video')
         toast.success('Video call sent successfully')
-        isAdded([...added, { ...expectedFriend, type: "video" }])
+        isAdded([...added, { ...expectedFriend, type: "video", id: Date.now() }])
     }
 
 
