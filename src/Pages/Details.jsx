@@ -65,12 +65,13 @@ export default function Details() {
         <div className='container mx-auto my-10 flex flex-col md:flex-row gap-10 justify-between p-2'>
             {/* left side */}
             <div className='space-y-2 md:max-w-[500px] flex-1 '>
-                <div className='text-center bg-white p-6 border border-gray-300 rounded-2xl'>
+                <div className='text-center bg-white p-6 border border-gray-300 rounded-2xl space-y-3'>
                     <img src={picture} alt="" className='mx-auto rounded-full' />
                     <h1 className='text-2xl font-bold'>{name}</h1>
                     <p className={`w-fit mx-auto p-2 rounded-2xl text-gray-900 ${status === 'overdue' ? "bg-red-300" : status === 'on-track' ? "bg-green-400" : "bg-yellow-300"}`}> {status}</p>
-                    <p> {tags} </p>
+                    <p> {tags.map(tag => <h1>{tag}</h1>)} </p>
                     <p>{email}</p>
+                    <p>{bio}</p>
                 </div>
                 <div className='space-y-2'>
                     <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><FaBell /> Snooze 2 weeks</button> </div>

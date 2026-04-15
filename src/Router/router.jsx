@@ -4,6 +4,7 @@ import Timeline from "../Pages/Timeline";
 import Stats from "../Pages/Stats";
 import Homepage from "../Layouts/Homepage";
 import Details from "../Pages/Details";
+import Error from "../Pages/Error";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
         path: "/timeline",
         element: <Timeline></Timeline>
       }
-    ]
+    ],
+    errorElement:<Error></Error>
   },
 ]);

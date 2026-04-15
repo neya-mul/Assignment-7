@@ -17,9 +17,9 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
             <NavLink to='/' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><IoHome />Home</NavLink>
             <NavLink to='stats' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><RiTimeLine />
-              Stats</NavLink>
+              Timeline</NavLink>
             <NavLink to='timeline' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><TfiStatsUp />
-              Time Line</NavLink>
+              Stats</NavLink>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl"><span className='text-black'>Keen</span><span className='text-green-950'>Keeper</span></a>
@@ -28,9 +28,9 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1">
           <NavLink to='/' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><IoHome />Home</NavLink>
           <NavLink to='stats' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><RiTimeLine />
-            Stats</NavLink>
+            Timeline</NavLink>
           <NavLink to='timeline' className={({ isActive }) => `${isActive ? 'bg-green-300' : ""} flex items-center btn text-gray-600 mx-1`}><TfiStatsUp />
-            Time Line</NavLink>
+            Stats</NavLink>
         </ul>
       </div>
 
