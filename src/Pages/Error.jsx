@@ -8,7 +8,6 @@ export default function Error() {
         <p className='text-[3rem]'>Page not found</p>
         <p>Ooops! The page you are looking for doesn't exist or have been removed</p>
         <Link to='/' className='btn bg-green-800 text-white mt-3'>Go Home</Link>
-
     </div>
   )
 }

@@ -69,7 +69,7 @@ export default function Details() {
                     <img src={picture} alt="" className='mx-auto rounded-full' />
                     <h1 className='text-2xl font-bold'>{name}</h1>
                     <p className={`w-fit mx-auto p-2 rounded-2xl text-gray-900 ${status === 'overdue' ? "bg-red-300" : status === 'on-track' ? "bg-green-400" : "bg-yellow-300"}`}> {status}</p>
-                    <p> {tags.map(tag => <h1>{tag}</h1>)} </p>
+                    <p className='flex w-fit mx-auto gap-2'> {tags.map(tag => <h1 className='bg-green-400 m-3 w-fit mx-auto p-2 rounded-2xl text-white'>{tag}</h1>)} </p>
                     <p>{email}</p>
                     <p>{bio}</p>
                 </div>
