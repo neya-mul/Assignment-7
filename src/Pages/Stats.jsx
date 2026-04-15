@@ -25,11 +25,11 @@ export default function Stats() {
 
 
   return (
-    <div className='container mx-auto space-y-5 my-5'>
+    <div className='container mx-auto space-y-5 my-10'>
       <div>
         <h1 className='text-3xl font-bold'>Timeline</h1>
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn m-1">Filter timeline</div>
+        <div className="dropdown ">
+          <div tabIndex={0} role="button" className="btn m-1 bg-white">Filter timeline</div>
           <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
             <button onClick={textButton} className='btn'><a>Text</a></button>
             <button onClick={audioButton} className='btn'><a>Audio</a></button>
@@ -41,7 +41,9 @@ export default function Stats() {
       <div>
         <div className=' p-2 rounded-2xl space-y-2'>
           {
-            display.map(add => <Added add={add} key={add.id}></Added>)
+            display.length === 0 ? <div className='text-center'><h2 className='font-bold text-2xl'>No friend to show</h2></div>
+
+              : display.map(add => <Added add={add} key={add.id}></Added>)
 
           }
         </div>
