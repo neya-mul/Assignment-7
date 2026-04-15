@@ -1,10 +1,17 @@
-import { useState } from 'react'
-import { Outlet } from 'react-router'
+import { useEffect, useState } from 'react'
+import { Outlet, useLocation } from 'react-router'
 import Navbar from './Layouts/Navbar'
 import Footer from './Layouts/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const {pathname} = useLocation()
+useEffect(()=>{
+  document.documentElement.scrollTo({
+    top:0,
+    left:0,
+    // behavior:'smooth'
+  })
+}, [pathname])
 
   return (
     <>
