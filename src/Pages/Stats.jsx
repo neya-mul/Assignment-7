@@ -25,7 +25,7 @@ export default function Stats() {
 
 
   return (
-    <div className='container mx-auto space-y-5 my-10'>
+    <div className='container mx-auto space-y-5 my-10 min-h-[37vh]'>
       <div>
         <h1 className='text-3xl font-bold'>Timeline</h1>
         <div className="dropdown ">
@@ -41,7 +41,7 @@ export default function Stats() {
       <div>
         <div className=' p-2 rounded-2xl space-y-2'>
           {
-            display.length === 0 ? <div className='text-center'><h2 className='font-bold text-2xl'>No friend to show</h2></div>
+            display.length === 0 ? <div className='flex justify-center items-center pt-30'><h2 className='font-bold text-2xl'>No friend to show</h2></div>
 
               : display.map(add => <Added add={add} key={add.id}></Added>)
 
