@@ -1,16 +1,7 @@
-# React + Vite
+The name of this project is KeenKeeper.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Is is my 7th assignment in my web course Ai Powered Future Ready Web Dev(Batch-13) by Programming Hero.
+This website is related with friends.There is a navbar where 3 buttons are showen . and they are: Home, Timeline and Stats. Some frinds data has showen in this website as a card. Each friend card contains image, name, day since contact, tags and status. Whenever I click at any friend card, that friend's data will be showen. And I can call or send message and make a video call with them. At the timeline section, there is the history of all calls,texts and video calls. I can also filter them. At the state section, there is a pie chart about the numbers of calls, texts and video calls.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
