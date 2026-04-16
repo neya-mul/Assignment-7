@@ -31,13 +31,13 @@ export const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Suspense fallback={<div className="flex justify-center items-center py-60"><RotateLoader /></div>}>
-          <Timeline></Timeline>
+          <Stats></Stats>
         </Suspense>
       },
       {
         path: "/timeline",
         element: <Suspense fallback={<div className="flex justify-center items-center py-60"><RotateLoader /></div>}>
-          <Stats></Stats>
+          <Timeline></Timeline>
         </Suspense>
       }
     ],
