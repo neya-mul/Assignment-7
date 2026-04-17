@@ -16,12 +16,12 @@ export default function SecondPart() {
       </div>
 
       <div className='text-[#244D3F] text-center bg-white w-[200px] py-15 mx-auto '>
-        <h1 className='text-2xl font-bold'>6</h1>
+        <h1 className='text-2xl font-bold'>4</h1>
         <p>Need Attention</p>
       </div>
 
       <div className='text-[#244D3F] text-center bg-white w-[200px] py-15 mx-auto '>
-        <h1 className='text-2xl font-bold'>12</h1>
+        <h1 className='text-2xl font-bold'>3</h1>
         <p>Interactions This Month</p>
       </div>
 

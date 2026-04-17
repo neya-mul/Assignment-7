@@ -74,9 +74,9 @@ export default function Details() {
                     <p>{bio}</p>
                 </div>
                 <div className='space-y-2'>
-                    <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><FaBell /> Snooze 2 weeks</button> </div>
-                    <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full items-center justify-center p-2 bg-white'><FaBoxArchive /> Archive</button> </div>
-                    <div className='text-center border rounded-2xl overflow-hidden border-gray-300'><button className='flex w-full text-red-600 items-center justify-center p-2 bg-white'><AiFillDelete /> Delete</button> </div>
+                    <div className=' text-center border rounded-2xl overflow-hidden border-gray-300'><button className='btn flex w-full items-center justify-center p-2 bg-white'><FaBell /> Snooze 2 weeks</button> </div>
+                    <div className=' text-center border rounded-2xl overflow-hidden border-gray-300'><button className='btn flex w-full items-center justify-center p-2 bg-white'><FaBoxArchive /> Archive</button> </div>
+                    <div className=' text-center border rounded-2xl overflow-hidden border-gray-300'><button className='btn flex w-full text-red-600 items-center justify-center p-2 bg-white'><AiFillDelete /> Delete</button> </div>
                 </div>
 
             </div>
